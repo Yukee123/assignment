@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types Of Games</title>
+</head>
+<body>
+    <h1>Data base operation is completed</h1>
+    {% if record %}
+    <table border="3px solid black">
+        <caption>Types Of Games which are popular for Bhutanese Youth</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Releasedate</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in record %}
+                <tr>
+                    <th>{{ i.name }}</th>
+                    <th>{{ i.releasedate }}</th>
+                    <th>{{ i.type }}</th>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</body>
+</html>
